@@ -9,33 +9,41 @@ html {
 }
   
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     font-family: 'Montserrat', sans-serif;
     line-height: 1;
     font-weight: 400;
     color: #555;
     background-color: hsl(30, 38%, 92%);
+    flex-direction: column;
 }
 
 .main-container {
     display: grid;
     grid-template-rows: 25fr 75fr;
-    width: 60rem;
-    height: auto;
-    margin: 15rem 0;
+    width: auto;
+    height: 65rem;
+    margin: 15rem 1rem;
     background-color: hsl(0, 0%, 100%);
     border-radius: 11px;
     overflow: hidden;
 }
 
 .perfume-content {
-    position: relative;
     display: grid;
     align-items: center;
     padding: 0 1.5rem;
 }
 
-.perfume-img {
+.mobile-img {
     width: 100%;
+}
+
+.desktop-img {
+    display: none;
 }
 
 .perfume-tags {
@@ -64,13 +72,10 @@ h1 {
 .perfume-first-price {
     margin-right: 1rem;
     font-size: 3rem;
-    color: rgba(18, 135, 104, 0.944);
+    color: hsla(157, 36%, 37%, 1);
 }
 
 .perfume-second-price {
-    position: absolute;
-    bottom: 89px;
-    left: 150px;
     text-decoration: line-through;
     color: hsl(0, 0%, 47%);
 }
@@ -82,7 +87,7 @@ h1 {
     margin: 1rem 0;
     padding: 2rem;
     text-align: center;
-    background-color: rgba(18, 135, 104, 0.944);
+    background-color: hsla(157, 36%, 37%, 1);
     border-radius: 12px;
 }
 
@@ -104,3 +109,24 @@ h1 {
     text-align: center;
 }
 
+@media only screen and (min-width: 420px) {  
+    .main-container {
+        grid-template-columns: 50fr 50fr;
+        width: 60rem;
+        height: 45rem;
+    }
+
+    .mobile-img {
+        display: none;
+    }
+
+    .desktop-img {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .perfume-content {
+        padding: 2rem;
+    }
+  
+} 
