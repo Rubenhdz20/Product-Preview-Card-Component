@@ -9,7 +9,6 @@ html {
 }
   
 body {
-    font-family: 'Fraunces', serif;
     font-family: 'Montserrat', sans-serif;
     line-height: 1;
     font-weight: 400;
@@ -20,11 +19,88 @@ body {
 .main-container {
     display: grid;
     grid-template-rows: 25fr 75fr;
-    height: 55rem;
-    padding: 0 2rem;
+    width: 60rem;
+    height: auto;
     margin: 15rem 0;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 11px;
+    overflow: hidden;
+}
+
+.perfume-content {
+    position: relative;
+    display: grid;
+    align-items: center;
+    padding: 0 1.5rem;
 }
 
 .perfume-img {
     width: 100%;
 }
+
+.perfume-tags {
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: black;
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.perfume-title {
+    font-size: 1.4rem;
+    line-height: 3;
+    color: hsl(0, 0%, 47%);
+}
+
+.perfume-description {
+   margin-bottom: 2rem;
+   font-size: 1.5rem;
+   line-height: 1.5;
+   color: hsl(0, 0%, 47%);
+}
+
+.perfume-first-price {
+    margin-right: 1rem;
+    font-size: 3rem;
+    color: rgba(18, 135, 104, 0.944);
+}
+
+.perfume-second-price {
+    position: absolute;
+    bottom: 89px;
+    left: 150px;
+    text-decoration: line-through;
+    color: hsl(0, 0%, 47%);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 2rem;
+    text-align: center;
+    background-color: rgba(18, 135, 104, 0.944);
+    border-radius: 12px;
+}
+
+.perfume-add-button {
+    font-size: 2rem;
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+}
+
+.perfume-icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    color: hsl(0, 0%, 100%);
+}
+
+.attribution {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
